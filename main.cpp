@@ -24,8 +24,8 @@ void setup() {
 	pinMode(pinPIR, INPUT);
 	pinMode(pinLED, OUTPUT);
 
+	Serial.println("Conectando ao Wi-Fi");
 	WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-	Serial.print("Conectando ao Wi-Fi");
 	while (WiFi.status() != WL_CONNECTED) {
 		delay(500);
 		Serial.print(".");
@@ -74,3 +74,4 @@ void loop() {
 	}
 	delay(200);
 }
+
